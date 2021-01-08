@@ -1,0 +1,35 @@
+{
+  "name": "bottom-sheet-react",
+  "version": "0.1.0",
+  "author": "nibdo",
+  "license": "MIT",
+  "private": false,
+  "declaration": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@types/node": "^12.19.12",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "tslint": "^6.1.3",
+    "@types/react": "^16.14.2",
+    "@types/react-dom": "^16.9.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "scripts": {
+    "build": "npm run compile && npm run copy",
+    "compile": "tsc",
+    "copy": "cp ./src/index.css ./dist/ && cp ./package.json ./dist/ && cp ./LICENSE ./dist/"
+  },
+  "keywords": [
+    "react",
+    "bottom-sheet"
+  ]
+}

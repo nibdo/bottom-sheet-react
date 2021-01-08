@@ -1,0 +1,94 @@
+.bottom-sheet__wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(128, 128, 128, 0.55);
+  z-index: 3;
+}
+
+.bottom-sheet__container {
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 24px 24px 0 0;
+  -webkit-backface-visibility: hidden;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  background: white;
+
+}
+
+.bottom-sheet__animate-open {
+  animation-name: open;
+  animation-duration: 0.3s;
+}
+
+@keyframes open {
+  0% {
+    bottom: -200%;
+  }
+  100% {
+    bottom: -50%;
+  }
+}
+.bottom-sheet__animate-open-modal {
+  animation-name: open-modal;
+  animation-duration: 0.3s;
+}
+
+@keyframes open-modal {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+/** Open full on demand */
+.bottom-sheet__animate-open-full {
+  animation-name: open-full;
+  animation-delay: 0s;
+  animation-duration: 0.3s;
+}
+
+@keyframes open-full {
+  100% {
+    bottom: 0;
+  }
+}
+.bottom-sheet__animate-reset {
+  animation-name: reset;
+  animation-delay: 0s;
+  animation-duration: 0.3s;
+}
+@keyframes reset {
+  100% {
+    bottom: -50%;
+  }
+}
+.bottom-sheet__animate-reset-modal {
+  animation-name: reset-modal;
+  animation-delay: 0s;
+
+  animation-duration: 0.3s;
+}
+@keyframes reset-modal {
+  100% {
+    bottom: 0;
+  }
+}
+.bottom-sheet__animate-close {
+  animation-name: close !important;
+  animation-duration: 0.3s !important;
+}
+@keyframes close {
+  100% {
+    bottom: -110%;
+  }
+}
