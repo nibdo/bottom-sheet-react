@@ -90,7 +90,7 @@ const BottomSheetView = (props: BottomSheetViewProps) => {
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
-        {React.cloneElement(children, { closeBottomSheet })}
+        {React.Children.map(children, child => React.cloneElement(child, { closeBottomSheet }))}
       </div>
     </div>
   );
